@@ -1,4 +1,11 @@
 <?php
+/**
+ * Application
+ *
+ * @author       Duminda Namal
+ * @version      $Id: v1.0.0 2019-March-09 Exp $;
+ * @copyright    Copyright &copy; NextDevelopers.
+ */
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
