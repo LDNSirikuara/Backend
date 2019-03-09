@@ -1,4 +1,11 @@
 <?php
+/**
+ * Application
+ *
+ * @author       Duminda Namal
+ * @version      $Id: v1.0.0 2019-March-09 Exp $;
+ * @copyright    Copyright &copy; NextDevelopers.
+ */
 
 use Illuminate\Http\Request;
 
@@ -15,5 +22,11 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::apiresource('/Posts', 'PostController');
+
+Route::group(['prefix' => 'Posts'], function () {
+    Route::apiResource('/{Post}/comments','CommentController');
 });
  
